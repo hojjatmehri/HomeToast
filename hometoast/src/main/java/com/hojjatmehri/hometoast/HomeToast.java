@@ -14,9 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeToast extends AppCompatActivity {
 
-    LayoutInflater inflater;
-    View layout;
-    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +24,9 @@ public class HomeToast extends AppCompatActivity {
 
     public void show(@NonNull String toastText, @Nullable int toastTextColor) {
 
+        LayoutInflater inflater;
+        View layout;
+        TextView text;
         inflater = getLayoutInflater();
         layout = inflater.inflate(R.layout.activity_toast,
                 (ViewGroup) findViewById(R.id.toast_layout_root));
