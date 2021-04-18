@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ToastActivity extends AppCompatActivity {
+public class HomeToast extends AppCompatActivity {
 
     LayoutInflater inflater;
     View layout;

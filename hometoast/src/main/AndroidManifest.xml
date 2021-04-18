@@ -3,7 +3,7 @@
     package="com.hojjatmehri.hometoast">
 
     <application>
-        <activity android:name=".ToastActivity"></activity>
+        <activity android:name=".HomeToast"></activity>
     </application>
 
 </manifest>

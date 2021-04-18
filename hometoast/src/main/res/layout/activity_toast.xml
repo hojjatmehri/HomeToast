@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@color/transparent"
     android:id="@+id/toast_layout_root"
-    tools:context=".ToastActivity">
+    tools:context=".HomeToast">
 
     <TextView android:id="@+id/text"
         android:layout_centerInParent="true"
