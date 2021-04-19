@@ -1,5 +1,6 @@
 package com.hojjatmehri.hometoast;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -42,6 +43,10 @@ public class HomeToast {
         this.toastMessage = toastMessage;
         viewToast(1);
     }
+    public void showError(@NonNull String toastMessage){
+        this.toastMessage = toastMessage;
+        viewToast(2);
+    }
     public void show(@NonNull String toastMessage , @Nullable int toastTextColor){
         this.toastMessage = toastMessage;
         this.toastTextColor = toastTextColor;
@@ -64,6 +69,7 @@ public class HomeToast {
     }
 
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private void viewToast(int iStatus){
         LayoutInflater inflater;
         View layout;
@@ -74,6 +80,8 @@ public class HomeToast {
 
         relbg = layout.findViewById(R.id.toast_layout_root);
         text = (TextView) layout.findViewById(R.id.text);
+        relbg.setBackgroundDrawable(activity.getDrawable(R.drawable.bg_success));
+        relbg.setElevationShadowColor(activity.getColor(R.color.success));
         switch (iStatus){
             case 1:
                 relbg.setBackgroundDrawable(activity.getDrawable(R.drawable.bg_success));
@@ -83,8 +91,8 @@ public class HomeToast {
                 relbg.setBackgroundDrawable(activity.getDrawable(R.drawable.bg_error));
                 relbg.setElevationShadowColor(activity.getColor(R.color.error));
                 break;
-            default:
-                relbg.setBackgroundColor(toastBGColor);
+//            default:
+//                relbg.setBackgroundColor(toastBGColor);
         }
 
         text.setText(toastMessage);
