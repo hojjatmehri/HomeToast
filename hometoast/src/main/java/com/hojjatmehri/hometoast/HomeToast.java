@@ -1,5 +1,6 @@
 package com.hojjatmehri.hometoast;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -22,12 +23,12 @@ public class HomeToast extends AppCompatActivity {
 
     }
 
-    public void show(@NonNull String toastText, @Nullable int toastTextColor) {
+    public void show(Activity act, @NonNull String toastText, @Nullable int toastTextColor) {
 
         LayoutInflater inflater;
         View layout;
         TextView text;
-        inflater = getLayoutInflater();
+        inflater = act.getLayoutInflater();
         layout = inflater.inflate(R.layout.activity_toast,
                 (ViewGroup) findViewById(R.id.toast_layout_root));
 
@@ -36,7 +37,7 @@ public class HomeToast extends AppCompatActivity {
         if (toastTextColor != 0)
             text.setTextColor(toastTextColor);
 
-        Toast toast = new Toast(getApplicationContext());
+        Toast toast = new Toast(act);
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
