@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<carbon.widget.RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/toast_layout_root"
-    android:background="#FFF"
+    app:carbon_cornerRadius="20dp"
+    app:carbon_elevation="10dp"
+    app:carbon_elevationShadowColor="@color/button"
+    app:carbon_rippleRadius="10dp"
+    app:cardCornerRadius="15dp"
     android:orientation="horizontal"
     tools:context=".HomeToast">
 
@@ -17,4 +21,4 @@
         android:layout_height="wrap_content"
         android:textColor="@color/grey08" />
 
-</RelativeLayout>
+</carbon.widget.RelativeLayout>

@@ -8,11 +8,24 @@
 
 
 
+
+    <color name="text">#353c47</color>
+    <color name="bg_success">#edf7ef</color>
+    <color name="bg_error">#f9eeeb</color>
+    <color name="bg_information">#e7eff9</color>
+    <color name="bg_warning">#fdf7eb</color>
+    <color name="line_success">#c7e3ca</color>
+    <color name="line_error">#ecc7bd</color>
+    <color name="line_information">#b2cdee</color>
+    <color name="line_warning">#f5deb5</color>
+    <color name="success">#62b063</color>
+    <color name="error">#d9593a</color>
+    <color name="information">#2a6fdf</color>
+    <color name="warning">#e19736</color>
     <color name="main_act_text">#757575</color>
     <color name="green_1">#18AC30</color>
     <color name="punk_1">#EC5692</color>
     <color name="blue_1">#0088FF</color>
-    <color name="text">#040404</color>
     <color name="text2">#707070</color>
     <color name="text3">#093F68</color>
     <color name="text4">#757575</color>
