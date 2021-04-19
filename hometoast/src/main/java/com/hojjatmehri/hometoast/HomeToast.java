@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,13 +76,14 @@ public class HomeToast {
         LayoutInflater inflater;
         View layout;
         TextView text;
-        ImageView img;
+        ImageView img, imgClose;
         inflater = activity.getLayoutInflater();
         layout = inflater.inflate(R.layout.activity_toast,
                 (ViewGroup) activity.findViewById(R.id.toast_layout_root));
 
         relbg = layout.findViewById(R.id.toast_layout_root);
         img = layout.findViewById(R.id.img_symbol);
+        imgClose = layout.findViewById(R.id.img_close);
         text = (TextView) layout.findViewById(R.id.text);
         switch (iStatus){
             case 1:
@@ -110,6 +112,25 @@ public class HomeToast {
         toast.setGravity(gravity, xOffset, yOffset);
         toast.setDuration(toastDuration);
         toast.setView(layout);
+        //toast.show();
+        CountDownTimer toastCountDown;
+        toastCountDown = new CountDownTimer(toastDuration, 1000 /*Tick duration*/) {
+            public void onTick(long millisUntilFinished) {
+                toast.show();
+            }
+            public void onFinish() {
+                toast.cancel();
+            }
+        };
+
+        // Show the toast and starts the countdown
         toast.show();
+        toastCountDown.start();
+        imgClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast.cancel();
+            }
+        });
     }
 }
