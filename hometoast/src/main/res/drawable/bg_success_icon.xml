@@ -17,10 +17,10 @@
         android:bottom="0dp">
 
         <shape android:shape="rectangle">
-            <solid android:color="@color/bg_error"/>
+            <solid android:color="#62b063"/>
             <corners android:radius="10dp"/>
-            <stroke android:width="1dp"
-                android:color="@color/line_error"/>
+            <stroke android:width="0dp"
+                android:color="@color/success"/>
         </shape>
     </item>
 </layer-list>
