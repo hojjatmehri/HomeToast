@@ -21,14 +21,15 @@ public class HomeToast extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toast);
 
+        attachBaseContext(this);
     }
 
-    public void show(Activity act, @NonNull String toastText, @Nullable int toastTextColor) {
+    public void show( @NonNull String toastText, @Nullable int toastTextColor) {
 
         LayoutInflater inflater;
         View layout;
         TextView text;
-        inflater = act.getLayoutInflater();
+        inflater = getLayoutInflater();
         layout = inflater.inflate(R.layout.activity_toast,
                 (ViewGroup) findViewById(R.id.toast_layout_root));
 
@@ -37,7 +38,7 @@ public class HomeToast extends AppCompatActivity {
         if (toastTextColor != 0)
             text.setTextColor(toastTextColor);
 
-        Toast toast = new Toast(act);
+        Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
