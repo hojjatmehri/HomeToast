@@ -292,6 +292,7 @@ public class HomeToast {
         toastMessageIn = message;
         viewToast_s(1);
     }
+
     public static void showSuccess(@NonNull Activity activity, @NonNull String message) {
         toastMessageIn = message;
         act = activity;
@@ -363,6 +364,10 @@ public class HomeToast {
     }
 
 
+    public void showError( @NonNull String message) {
+        toastMessageIn = message;
+        viewToast_s(2);
+    }
     public static void showError(@NonNull Activity activity, @NonNull String message) {
         toastMessageIn = message;
         act = activity;
@@ -433,6 +438,10 @@ public class HomeToast {
         viewToast(2);
     }
 
+    public void showWarning( @NonNull String message) {
+        toastMessageIn = message;
+        viewToast_s(3);
+    }
     public static void showWarning(@NonNull Activity activity, @NonNull String message) {
         toastMessageIn = message;
         act = activity;
@@ -506,6 +515,10 @@ public class HomeToast {
         viewToast(3);
     }
 
+    public void showInformation( @NonNull String message) {
+        toastMessageIn = message;
+        viewToast_s(4);
+    }
     public static void showInformation(@NonNull Activity activity, @NonNull String message) {
         toastMessageIn = message;
         act = activity;
@@ -577,6 +590,10 @@ public class HomeToast {
         viewToast(4);
     }
 
+    public void show( @NonNull String message) {
+        toastMessageIn = message;
+        viewToast_s(0);
+    }
     public static void show(@NonNull Activity activity, @NonNull String message) {
         toastMessageIn = message;
         act = activity;
