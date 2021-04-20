@@ -11,10 +11,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        HomeToast.show(this,"Simple");
-//        HomeToast.showSuccess(this,"Success");
-//        HomeToast.showError(this,"Error");
-//        HomeToast.showWarning(this,"Warning");
-//        HomeToast.showInformation(this,"Information");
+        HomeToast.show(this,"Simple");
+        HomeToast.showSuccess(this,"Success");
+        HomeToast.showError(this,"Error");
+        HomeToast.showWarning(this,"Warning");
+        HomeToast.showInformation(this,"Information");
     }
 }

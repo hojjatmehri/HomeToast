@@ -2,6 +2,7 @@ package com.hojjatmehri.hometoast;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -40,6 +41,7 @@ public class HomeToast {
     static int tDirection = TEXT_DIRECTION_LTR;
     static int lDirection2 = LAYOUT_DIRECTION_LTR;
     static int tDirection2 = TEXT_DIRECTION_LTR;
+    static Typeface font = null;
 
 
     public HomeToast(Activity activity) {
@@ -64,8 +66,8 @@ public class HomeToast {
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
     }
-
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -75,11 +77,33 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
+    }
+
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration) {
+        HomeToast.act = activity;
+        if(layoutDirection !=0)
+            HomeToast.lDirection2 = layoutDirection;
+        else
+            HomeToast.lDirection2 = LAYOUT_DIRECTION_LTR;
+        if(textDirection !=0)
+            HomeToast.tDirection2 = textDirection;
+        else
+            HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
     }
 
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -89,12 +113,17 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
             HomeToast.toastTextColorIn = toastTextColor;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -104,6 +133,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -111,7 +144,8 @@ public class HomeToast {
         if(gravity !=0)
             HomeToast.gravityIn = gravity;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -121,6 +155,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -130,7 +168,8 @@ public class HomeToast {
         if(xOffset !=0)
             HomeToast.xOffsetIn = xOffset;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -140,6 +179,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -151,7 +194,8 @@ public class HomeToast {
         if(yOffset !=0)
             HomeToast.yOffsetIn = yOffset;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -161,6 +205,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -174,7 +222,8 @@ public class HomeToast {
         if(backgroundDrawable != null)
             HomeToast.bgDrawable = backgroundDrawable;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -184,6 +233,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -199,7 +252,8 @@ public class HomeToast {
         if(iconBackgroundDrawable != null)
             HomeToast.iconBgDrawable = iconBackgroundDrawable;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable, Drawable iconImageDrawable) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable, Drawable iconImageDrawable) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -209,6 +263,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -226,7 +284,8 @@ public class HomeToast {
         if(iconImageDrawable != null)
             HomeToast.iconDrawable = iconImageDrawable;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable, Drawable iconImageDrawable, int shadowColor) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable, Drawable iconImageDrawable, int shadowColor) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -236,6 +295,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
             HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -255,7 +318,8 @@ public class HomeToast {
         if(shadowColor !=0)
             HomeToast.shadow = shadowColor;
     }
-    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable, Drawable iconImageDrawable, int shadowColor, int iconColor) {
+    public HomeToast(@NonNull Activity activity, int layoutDirection, int textDirection
+            , Typeface fontTypeFace,  int toastDuration, int toastTextColor, int gravity, int xOffset, int yOffset, Drawable backgroundDrawable, Drawable iconBackgroundDrawable, Drawable iconImageDrawable, int shadowColor, int iconColor) {
         HomeToast.act = activity;
         if(layoutDirection !=0)
             HomeToast.lDirection2 = layoutDirection;
@@ -265,6 +329,10 @@ public class HomeToast {
             HomeToast.tDirection2 = textDirection;
         else
             HomeToast.tDirection2 = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if(toastDuration !=0)
         HomeToast.toastDurationIn = toastDuration;
         if(toastTextColor !=0)
@@ -315,7 +383,7 @@ public class HomeToast {
     }
 
     public static void showSuccess(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection) {
+            , @Nullable int layoutDirection , @Nullable int  textDirection ) {
         toastMessageIn = message;
         act = activity;
         if (layoutDirection != 0)
@@ -324,9 +392,23 @@ public class HomeToast {
             tDirection = textDirection;
         viewToast(1);
     }
+    public static void showSuccess(@NonNull Activity activity, @NonNull String message
+            , @Nullable int layoutDirection , @Nullable int  textDirection , @Nullable Typeface fontTypeFace) {
+        toastMessageIn = message;
+        act = activity;
+        if (layoutDirection != 0)
+            lDirection = layoutDirection;
+        if (textDirection != 0)
+            tDirection = textDirection;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
+        viewToast(1);
+    }
 
     public static void showSuccess(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor) {
         toastMessageIn = message;
         act = activity;
@@ -338,13 +420,17 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         viewToast(1);
     }
 
     public static void showSuccess(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor, @Nullable int durationInMilliSec) {
         toastMessageIn = message;
         act = activity;
@@ -356,6 +442,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -399,9 +489,24 @@ public class HomeToast {
         viewToast(2);
     }
 
+    public static void showError(@NonNull Activity activity, @NonNull String message
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace) {
+        toastMessageIn = message;
+        act = activity;
+        if (layoutDirection != 0)
+            lDirection = layoutDirection;
+        if (textDirection != 0)
+            tDirection = textDirection;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
+        viewToast(2);
+    }
+
 
     public static void showError(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor) {
         toastMessageIn = message;
         act = activity;
@@ -413,13 +518,17 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         viewToast(2);
     }
 
     public static void showError(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor, @Nullable int durationInMilliSec) {
         toastMessageIn = message;
         act = activity;
@@ -431,6 +540,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -476,9 +589,27 @@ public class HomeToast {
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
         viewToast(3);
     }
+    public static void showWarning(@NonNull Activity activity, @NonNull String message
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace) {
+        toastMessageIn = message;
+        act = activity;
+        if (layoutDirection != 0)
+            lDirection = layoutDirection;
+        else
+            HomeToast.lDirection = LAYOUT_DIRECTION_LTR;
+        if(textDirection !=0)
+            HomeToast.tDirection = textDirection;
+        else
+            HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
+        viewToast(3);
+    }
 
     public static void showWarning(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor) {
         toastMessageIn = message;
         act = activity;
@@ -490,13 +621,17 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         viewToast(3);
     }
 
     public static void showWarning(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor, @Nullable int durationInMilliSec) {
         toastMessageIn = message;
         act = activity;
@@ -508,6 +643,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -552,8 +691,27 @@ public class HomeToast {
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
         viewToast(4);
     }
+
     public static void showInformation(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace) {
+        toastMessageIn = message;
+        act = activity;
+        if (layoutDirection != 0)
+            lDirection = layoutDirection;
+        else
+            HomeToast.lDirection = LAYOUT_DIRECTION_LTR;
+        if(textDirection !=0)
+            HomeToast.tDirection = textDirection;
+        else
+            HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
+        viewToast(4);
+    }
+    public static void showInformation(@NonNull Activity activity, @NonNull String message
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor) {
         toastMessageIn = message;
         act = activity;
@@ -565,13 +723,17 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         viewToast(4);
     }
 
     public static void showInformation(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace
             , @Nullable int textColor, @Nullable int durationInMilliSec) {
         toastMessageIn = message;
         act = activity;
@@ -583,6 +745,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -629,7 +795,26 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace) {
+        toastMessageIn = message;
+        act = activity;
+        if (layoutDirection != 0)
+            lDirection = layoutDirection;
+        else
+            HomeToast.lDirection = LAYOUT_DIRECTION_LTR;
+        if(textDirection !=0)
+            HomeToast.tDirection = textDirection;
+        else
+            HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
+        viewToast(0);
+    }
+
+    public static void show(@NonNull Activity activity, @NonNull String message
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace, @Nullable int textColor
     ) {
         toastMessageIn = message;
         act = activity;
@@ -641,6 +826,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         bgDrawable = act.getDrawable(R.drawable.bg_default);
@@ -650,7 +839,7 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace, @Nullable int textColor
             , @Nullable int durationInMilliSec) {
         toastMessageIn = message;
         act = activity;
@@ -662,6 +851,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -674,7 +867,7 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace, @Nullable int textColor
             , @Nullable int durationInMilliSec
             , @Nullable Drawable backgroundDrawable) {
         toastMessageIn = message;
@@ -687,6 +880,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -702,7 +899,7 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace, @Nullable int textColor
             , @Nullable int durationInMilliSec
             , @Nullable Drawable backgroundDrawable, @Nullable Drawable iconBackgroundDrawable) {
         toastMessageIn = message;
@@ -715,6 +912,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -732,7 +933,7 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace, @Nullable int textColor
             , @Nullable int durationInMilliSec
             , @Nullable Drawable backgroundDrawable, @Nullable Drawable iconBackgroundDrawable
             , @Nullable Drawable iconImage) {
@@ -746,6 +947,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -766,7 +971,7 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable Typeface fontTypeFace, @Nullable int textColor
             , @Nullable int durationInMilliSec
             , @Nullable Drawable backgroundDrawable, @Nullable Drawable iconBackgroundDrawable
             , @Nullable Drawable iconImage, @Nullable int iconColor) {
@@ -780,6 +985,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -802,7 +1011,7 @@ public class HomeToast {
     }
 
     public static void show(@NonNull Activity activity, @NonNull String message
-            , @Nullable int layoutDirection , @Nullable int  textDirection, @Nullable int textColor
+            , @Nullable int layoutDirection , @Nullable int  textDirection,  @Nullable Typeface fontTypeFace, @Nullable int textColor
             , @Nullable int durationInMilliSec
             , @Nullable Drawable backgroundDrawable, @Nullable Drawable iconBackgroundDrawable
             , @Nullable Drawable iconImage, @Nullable int iconColor, @Nullable int shadowColor) {
@@ -816,6 +1025,10 @@ public class HomeToast {
             HomeToast.tDirection = textDirection;
         else
             HomeToast.tDirection = TEXT_DIRECTION_LTR;
+        if(fontTypeFace != null)
+            HomeToast.font = fontTypeFace;
+        else
+            HomeToast.font = null;
         if (textColor != 0)
             toastTextColorIn = textColor;
         if (durationInMilliSec != 0)
@@ -904,6 +1117,8 @@ public class HomeToast {
                 img.setColorFilter(iconC);
         }
 
+        if(font != null)
+            text.setTypeface(font);
         text.setText(toastMessageIn);
         if (toastTextColorIn != 0)
             text.setTextColor(toastTextColorIn);
@@ -981,6 +1196,8 @@ public class HomeToast {
                 img.setColorFilter(iconC);
         }
 
+        if(font != null)
+            text.setTypeface(font);
         text.setText(toastMessageIn);
         if (toastTextColorIn != 0)
             text.setTextColor(toastTextColorIn);
