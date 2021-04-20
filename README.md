@@ -35,8 +35,6 @@ dependencies {
 
 ## Usage
 
-Each method always returns a `Toast` object, so you can customize the Toast much more. **DON'T FORGET THE `show()` METHOD!**
-
 To display an error Toast:
 
 ``` java
