@@ -24,7 +24,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 
 ```gradle
 dependencies {
-	implementation 'com.github.hojjatmehri:HomeToast:1.0.1'
+	implementation 'com.github.hojjatmehri:HomeToast:1.0.2'
 }
 ```
 ## Screenshots
